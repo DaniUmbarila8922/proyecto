@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<style type="text/css"></style>
+<head>
+<link type="text/css" rel="stylesheet" href="stilo.css"\>
+<link rel="shortcut icon"/>
+<meta charset="utf-8">
+  <link rel="stylesheet" href="css/smoothness/jquery-ui-1.10.4.custom.css">
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/jquery-ui-1.10.4.custom.js"></script>
+  <script src="js/datepicker-es.js"></script>
+  <script>
+      $(function () {
+         $.datepicker.setDefaults($.datepicker.regional["es"]);
+             $("#datepicker").datepicker({
+             firstDay: 1
+           });
+     });
+        </script>
+  <script type="text/javascript">
+		function validar(frm) {
+  			if (frm.apellido.value.length < 4) {
+   			alert ("Verifique la Longitud de los Datos Ingresados");
+			ape.focus();
+   			return false;
+  			}
+			if (frm.nombre.value.length < 4) {
+   			alert ("Verifique la Longitud de los Datos Ingresados");
+			nom.focus();
+   			return false;
+  			}
+			if (frm.correo.value.length < 4) {
+   			alert ("Verifique la Longitud de los Datos Ingresados");
+			cor.focus();
+   			return false;
+  			}
+			if (frm.comentario.value.length < 4) {
+   			alert ("Verifique la Longitud de los Datos Ingresados");
+			com.focus();
+   			return false;
+  			}
+			
+		}
+		</script>
+</head>
+
+<body bgcolor="white">
+
+
+
+
+<div id="contedor">
+        <div id="encabezado" ><a href="index.html"><div id="img"></div></a>
+                
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html" id="menu">Inicio</a></li>
+                    <li><a href="contacto.html" id="menu">Contacto </a></li>
+                    <li><a href="orden.php"  id="menu">Registro</a></li>
+                 
+                </ul>
+            </nav>
+             <div id="RedesSociales"><table id="tbl">
+                          <td><a href="https://www.facebook.com/profile.php?id=100005893244660&fref=ts" target="_blank"><div id="fcb"></div></a></td>
+                           <td><a href="http://instagram.com"><div id="ins"></div></a></td>
+                            <td><a href="https://plus.google.com"><div id="goo"></div></a></td>
+                             <td><a href="https://twitter.com"><div id="twi"></div></a></td>
+
+
+
+                          </table></div> 
+         </div>
+            
+ 
+           <div id="centro">
+
+                <div id="tituloc2"><center>Contactenos</center></div>
+                
+                <div><FORM action="guardar_con.php" method="post" onsubmit="return validar(this)">
+<br /><br />
+
+  <TABLE BORDER=0 align="center">
+<TR>
+  <TD><img id="asterisco" src="images/asterisco.png"/>Apellido</TD>
+  <TD>
+  <INPUT id="ape" type=text name="apellido">
+  </TD>
+</TR>
+
+<TR>
+  <TD><img id="asterisco" src="images/asterisco.png"/>Nombre</TD>
+  <TD>
+  <INPUT  id="nom" type=text name="nombre">
+  </TD>
+</TR>
+
+<TR>
+  <TD>Género</TD>
+  <TD>Masculino
+    <INPUT type=radio name="genero" value="M">
+  <br>
+  Femenino  
+  <INPUT type=radio name="genero" value="F">
+  </TD>
+</TR>
+
+<TR>
+  <TD>Ocupación</TD>
+  <TD>
+  <SELECT name="ocupacion">
+    <OPTION VALUE="profesor">Profesor</OPTION>
+    <OPTION VALUE="estudiante">Estudiante</OPTION>
+    <OPTION VALUE="ingeniero">Ingeniero</OPTION>
+    <OPTION VALUE="jubilado">Jubilado</OPTION>
+    <OPTION VALUE="otro">Otro</OPTION>
+  </SELECT>
+  </TD>
+</TR>
+
+<TR>
+  <TD><img id="asterisco" src="images/asterisco.png"/>Correo</TD>
+  <TD>
+   <INPUT id="cor" type="email" name="correo"> 
+  </TD>
+</TR>
+
+<TR>
+  <TD><img id="asterisco" src="images/asterisco.png"/>Comentarios</TD>
+  <TD>
+  <TEXTAREA id="com" rows="3" name="comentario" placeholder="Escriba sus comentarios">  </TEXTAREA></TD>
+</TR>
+
+<TR>
+  <TD COLSPAN=2>
+  <INPUT type="submit" value="Enviar">
+  </TD>
+</TR>
+</TABLE></div>
+</div>
+
+
+
+         <footer id="pie">
+         <div >
+
+          <div id="t3"><img src="img-proyect/piepagina.png" width="280" height="65px"</div>
+         
+<div id="qr"><img src="http://flighthours.url.ph/images/qr.PNG" wdth="52px" height="52px"></img></div>
+
+         </div>
+         </footer>
+            
+</div>
+
+
+</body>
+ 
+</html>
