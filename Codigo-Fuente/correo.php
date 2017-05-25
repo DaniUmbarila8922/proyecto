@@ -1,41 +1,53 @@
+<!DOCTYPE html>
 <html lang="es">
-<style type="text/css"></style>
+<title>Colombia Vive</title>
+<meta charset="utf-8"/>
+<link rel="stylesheet" href="styles/style.css" type="text/css"/>
+<link rel="stylesheet" href="styles/prettyphoto.css" type="text/css"/>
+<link rel="stylesheet" href="styles/totop.css" type="text/css"/>
 <head>
-	<title>Colombia Vive</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1, maximun scale=1, minimum-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/fontello.css">
-	<link rel="stylesheet" type="text/css" href="css/stilo.css">
-	<script src="https://code.jquery.com/jquery-latest.js"> </script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
-    <script src="menu.js"></script>
 </head>
 <body>
-		<header>
-				<div class="barramenu"><a href="" class="btn-menu"><span class="icon-menu"></span>Menu</a></div>
-				<nav>
-                    <ul>
-					   <li><a href=""><span class="icon-home"></span>Inicio</a></li>
-					   <li><a href="Registro.html"><span class="icon-mail-alt"></span>Registro</a></li>
-						<li><a href=""><span class="icon-mail-alt"></span>Contacto</a></li>
-                    </ul>
-			</nav>
-		</header>
-		
-		<main>
-        <?php
-echo $usu=$_POST['cedula'];
-echo $mail=$_POST['mail'];
+<div class="main-container">
+    <header>
+        <h1><a href="index.html">Colombia Vive</a></h1>
+
+        <p id="tagline"><strong>Aprendiendo Historia</strong></p>
+    </header>
+</div>
+
+<div class="main-container">
+    <div id="nav-container">
+        <nav>
+            <ul class="nav">
+                <li class="active"><a href="index.html">Inicio</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li class="last"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="clear"></div>
+    </div>
+</div>
+<div class="main-container">
+    <div class="container1">
+        <div class="box">
+            <div>
+                <div id="header1">
+                    <h3><a href="index.html">Recuperar Contraseña</a></h3>
+                  <?php
+$usu=$_POST['cedula'];
+$mail=$_POST['mail'];
 $db_host = "localhost";
 $db_usuario = "id1527941_root";
 $db_password = "12345678";
 $db_nombre = "id1527941_proyecto";
-$db=mysqli_connect($db_host,$db_usuario,$db_password);
+$db=mysql_connect($db_host,$db_usuario,$db_password);
 
 if (!$db){
   die('no se puede conectar a la base de datos '.mysql_error());
 }
-mysqli_select_db($db_nombre,$db);
+mysql_select_db($db_nombre,$db);
 $sql="SELECT * FROM usuarios WHERE identificacion = '".$usu."'";
 $comprobar=mysql_query($sql);
 if(mysql_num_rows($comprobar)>0)
@@ -47,8 +59,8 @@ if(mysql_num_rows($comprobar)>0)
 	$para      = $mail;
 	$titulo    = 'Recuperación de contraseña';
 	$mensaje   = $men;
-	$cabeceras = 'From: dani.umbarila@gmail.com' . "\r\n" .
-	    		 'Reply-To: dani.umbarila@gmail.com' . "\r\n" .
+	$cabeceras = 'From: dumbarila1@poligran.edu.co' . "\r\n" .
+	    		 'Reply-To: dumbarila1@poligran.edu.co' . "\r\n" .
 	    		 'X-Mailer: PHP/' . phpversion();
 
 	mail($para, $titulo, $mensaje, $cabeceras);
@@ -70,9 +82,38 @@ else{
  mysql_close();
 
 ?>
- 	</main>
+                
+                
+                </div>
+            <div class="clear"></div>
+
+            <br/>
+
+            <div class="clear"></div>
+        </div>
+
+
+    </div>
+    <div class="main-container">
+    </div>
+
+    <div class="callout">
     
+        </div>
+    </div>
+    <br/>
+    <br/>
+</div>
+<script src="scripts/jquery.js" type="text/javascript"></script>
+<script src="scripts/prettyphoto.js" type="text/javascript"></script>
+<script src="scripts/jflow.js" type="text/javascript"></script>
+<script src="scripts/easing.js" type="text/javascript"></script>
+<script src="scripts/totop.js" type="text/javascript"></script>
+<script src="scripts/superfish.js" type="text/javascript"></script>
+<script src="scripts/functions.js" type="text/javascript"></script>
 </body>
 </html>
+
  
-</html>
+
+
