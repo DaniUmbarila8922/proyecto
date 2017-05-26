@@ -38,22 +38,24 @@
                   <?php
 $usu=$_POST['cedula'];
 $mail=$_POST['mail'];
-$db_host = "localhost";
-$db_usuario = "id1527941_root";
-$db_password = "12345678";
-$db_nombre = "id1527941_proyecto";
-$db=mysql_connect($db_host,$db_usuario,$db_password);
+//$db_host = "localhost";
+//$db_usuario = "id1527941_root";
+//$db_password = "12345678";
+//$db_nombre = "id1527941_proyecto";
+//$db=mysql_connect($db_host,$db_usuario,$db_password);
+$db=mysqli_connect("localhost","id1527941_root","12345678","id1527941_proyecto");
+mysqli_select_db($db,"id1527941_proyecto");
 
 if (!$db){
-  die('no se puede conectar a la base de datos '.mysql_error());
+  die('no se puede conectar a la base de datos '.mysqli_error());
 }
-mysql_select_db($db_nombre,$db);
+mysqli_select_db($db,"id1527941_proyecto");
 $sql="SELECT * FROM usuarios WHERE identificacion = '".$usu."'";
-$comprobar=mysql_query($sql);
-if(mysql_num_rows($comprobar)>0)
+$comprobar=mysqli_query($db,$sql);
+if(mysqli_num_rows($comprobar)>0)
 {
-  while($fila=mysql_fetch_array($comprobar)){
-  $men=$fila['password'];
+  while($fila=mysqli_fetch_array($comprobar)){
+  $men=$fila['clave'];
 }
 
 	$para      = $mail;
@@ -65,21 +67,21 @@ if(mysql_num_rows($comprobar)>0)
 
 	mail($para, $titulo, $mensaje, $cabeceras);
 	
- echo "<br /><br /><br /><br /> <h1><center>El mail a sido enviado al correo suministrado</center></h1><br /><br />";
-  echo "<h4><center>Su clave es:</center></h4>";
+ echo "<h2><center>El mail a sido enviado al correo suministrado</center></h2><br />";
+  echo "<h3><center>Su clave es:</center></h3>";
   echo "<center>".$men."</center>";
   echo "<h4><center>En el correo sumistrado recibira un correo con este mismo password<br /></center></h4>";
   echo "<center>".$mail."</center>";
 }
 else{ 
-  if(mysql_num_rows($comprobar)<=0)
+  if(mysqli_num_rows($comprobar)<=0)
         {
            
-		echo "<br /> <br /><br /> <br /><h1 ><center>El usuario no existe</center></h1> <br /> <br /><br />";
+		echo "<br /><br /><h1 ><center>El usuario no existe</center></h1> <br /> <br /><br />";
      echo "<h3><center>Lastimosamente no hemos podido encontrar el usuario para recuperar la contraseña, <br /> le recomendamos ponerse en contacto con el administrador del sistema.</center></h3>";
         }
  }
- mysql_close();
+ mysqli_close($db);
 
 ?>
                 
