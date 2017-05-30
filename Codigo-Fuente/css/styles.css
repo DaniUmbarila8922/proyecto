@@ -1,0 +1,523 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Roboto', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
+}
+a{
+  text-decoration: none;
+}
+  nav li {
+    display: inline-block;
+    min-width: 19%;
+    text-transform: uppercase;
+    
+    margin-bottom: 1%;
+    text-align: center;
+  }
+  nav li a{
+    padding: 16% 0;
+    border-top: 1px solid #fff; 
+  }
+  nav li a, .categoria{
+  text-decoration: none;
+    color: rgb(102,102,102);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    display: block;
+  }
+  nav li :hover, .active{
+    color: #FFB960;
+    border-top: 1px solid #FFB960;
+  }
+  .texthistoria, .franjapdf, .textodividido {
+    display: inline-block;
+    width: 45%;
+    margin: 0 2%;
+    vertical-align: middle;
+  }
+  .textodividido{
+    vertical-align: top;
+    padding-top: 6%;
+  }
+  .franjapdf{
+        background-color: rgb(242, 242, 242);
+    border-color: rgb(255, 255, 255);
+    border-radius: 0px;
+    border-style: solid;
+    height: calc(578px - 50px);
+    position: relative;
+  }
+  .franjapdf iframe{
+    width: 90%;
+    position: absolute;
+    height: 90%;
+    padding: 5%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  
+  .texthistoria h1{
+  color: #FFB960;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 39px;
+    text-align: left;
+  }
+  .texthistoria p{
+    line-height: 31px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 18px;
+      text-align: justify;
+  }
+  .mision, .vision, .categoria, .objetivos, .franjagris, .textosolo{
+        margin:  0;
+        width: 45%;
+        height:  25%;
+  }
+  .botondescarga{
+        margin: 15px 0;
+    display: block;
+  }
+  .botondescarga img{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .botondescarga span{
+    display: inline-block;
+    max-width: 84%;
+    vertical-align: middle;
+    font-size: 13px;
+    color: #333;
+  }
+
+.mision p img, .vision p img, .mision p span, .vision p span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.iconotexto img{
+  transform: rotate(50deg) scale(1) translateY(-34%) translateX(19%);
+}
+.vision .iconotexto img{
+  transform: inherit;
+}
+  .mision h2 span, .vision h2 span{
+    font-size: 36px;
+    letter-spacing: -0.5px;
+
+  }
+  .mision p, .vision p{
+        font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+  }
+  .iconotexto{
+    display: inline-block;
+    width: 20%; 
+    text-align: center;
+  }
+  .textoladoicono{
+    display: inline-block;
+    width: 78%;
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  h2{
+        margin-bottom: 3%;
+        font-size: 36px;
+    letter-spacing: -0.5px;
+  }
+  hr{
+        border: 1px dashed #f5f5f5;
+  }
+  .objetivos p{
+        text-align: justify;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .botonnaranja{
+        display: block;
+    border: 1px solid #ffb960;
+    width: 118px;
+    font-size: 16px;
+    padding: 6px 10px;
+    color: #B27931;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    float: right;
+  }
+  .botonnaranja span, .botonnaranja img{
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 10px;
+  }
+  .ico-checked, .textodividido p{
+    display: inline-block;
+    vertical-align: top;
+  }
+  .textodividido p{
+    max-width: 80%;
+    margin: 0 0 30px 30px;
+  }
+  .footer li{
+    display: inline-block;
+    padding-right: 6%;
+    width: 30%;
+        text-decoration: none;
+    color: rgb(102,102,102);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    padding-bottom: 6%;
+  }
+  .footer li:nth-child(3){
+    text-align: right;
+    width: 27%;
+    padding-right: inherit;
+
+  }
+  .footer li img, .footer li span{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .footer li a{
+    color: #B27931;
+    padding-left: 2%;
+  }
+  img{
+    max-width: 100%;
+  }
+    .franjagris{
+        background-color: rgb(242, 242, 242);
+    border-color: rgb(255, 255, 255);
+    border-radius: 0px;
+    border-style: solid;
+    height: calc(578px - 50px);
+    position: relative;
+  }
+  .videos li {
+    display: inline-block;
+    width: 25%;
+    padding: 1% 4% 0 4%;
+    position: relative;
+}
+.bannerprincipal img{
+  padding-top: 19%;
+}
+iframe {
+    width: 100%;
+}
+.franjagris h2{
+  text-align: center;
+    margin-top: 3%;
+
+}
+.contenedor{
+	max-width: 80%;
+	margin: 0 auto;
+}
+.fondoimagen{
+  background: url(../img/h6.jpg);
+  position: relative;
+  padding: 12% 0;
+  margin: 7% 0;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.fondoimagen:before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.fondoimagen p{
+  color: #fff;
+  font-size: 20px;
+    position: relative;
+        z-index: 9;
+    top: 28%;
+    text-align: justify;
+}
+.imagencentrada{
+  margin: 0 auto;
+  display: block;
+  padding: 5% 0;
+}
+.textosolo{
+  text-align: justify;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+.pfranjagris{
+  padding: 1% 5%;
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+.menu li, .logo, .menu{
+  display: inline-block;
+  vertical-align: middle;
+}
+.menu li{
+  padding: 0 15px;
+}
+.menu li a{
+  color: #333;
+}
+.logo{
+  width: 20%;
+}
+.menu{
+  width: 79%;
+  text-align: right;
+}
+/*Introduccion*/
+canvas {
+  background: #1f2355;
+}
+.introbackground{
+  background: #1f2355;
+}
+.boton{
+  display: block;
+    max-width: 130px;
+    border: 1px solid #2fcc73;
+    color: #2fcc73;
+    padding: 8px;
+    margin: 20px 0 0 0;
+}
+.introduccion{
+  background: #fff;
+  text-align: center;
+}
+.introduccion .mitad{
+  width: 48%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 8% 0;
+}
+.introduccion h1{
+letter-spacing: -0.5px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 39px;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+}
+.introduccion span{
+	color: #fff;
+	display: block;
+    line-height: 31px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    padding-right: 5%;
+}
+.introduccion iframe{
+	width: 100%;
+    height: 400px;
+}
+.introduccion nav li a{
+  color: #fff;
+}
+.introduccion .footer li{
+  color: #fff;
+}
+.introduccion .boton{
+  color: #fff;
+  border: 1px solid #fff;
+}
+.personaje, .sopadeletras{
+	display: inline-block;
+	vertical-align: middle;
+}
+.personaje {
+  max-width: 26%;
+}
+.personaje img{
+  max-width: 100%;
+}
+.sopadeletras{    
+  width: 100%;
+}
+.coloruno{
+	background-color: #E87686;
+	height: 100vh;
+}
+/*Sopa de letras/
+#puzzle {
+  border: 1px solid black;
+  padding: 20px;
+  float: left;
+  margin: 30px 20px;
+}
+
+#puzzle div {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* style for each square in the puzzle */
+#puzzle .puzzleSquare {
+  height: 40px;
+  width: 40px;
+  text-transform: uppercase;
+  background-color: #ffb960;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  font: 1em sans-serif;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+/* indicates when a square has been selected */
+#puzzle .selected {
+  background-color: #f2f2f2;
+}
+
+/* indicates that the square is part of a word that has been found */ 
+#puzzle .found {
+  background-color: blue;
+  color: white;
+}
+
+#puzzle .solved {
+  background-color: purple;
+  color: white;
+}
+
+/* indicates that all words have been found */
+#puzzle .complete {
+  background-color: green;
+}
+#puzzle{
+  display: inline-block;
+  width: 55%;
+}
+/**
+* Styles for the word list
+*/
+#words {
+  padding-top: 20px;
+  -moz-column-count: 2;
+  -moz-column-gap: 0;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 0;
+  column-count: 2;
+  column-gap: 0;
+width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 8%;
+}
+
+#words ul {
+  list-style-type: none;
+}
+
+#words li {
+    padding: 10px 0;
+    font: 1em sans-serif;
+    list-style-type: disc;
+}
+
+/* indicates that the word has been found */
+#words .wordFound {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/**
+* Styles for the button
+*/
+#solve {
+  margin: 0 30px;
+}
+
+/* Historia */
+
+.historia h1{
+  text-align: center;
+
+}
+.introduccion{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 90%;
+    margin: 0 auto;
+    background: transparent;
+}
+@media (max-width: 1025px){
+  .texthistoria, .franjagris{
+    width: 100%;
+    height: inherit;
+  }
+  .franjapdf{
+    width: 100%;
+  }
+  .bannerprincipal img {
+    padding-top: 0;
+  }
+  .historia h1{
+    font-size: 34px;
+  }
+  .textodividido, .footer li, .footer li:nth-child(3){
+    width: 100%;
+    text-align: left;
+  }
+  nav{
+    margin: 10px 0;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: left;
+    border-left: 2px solid #ffb960;
+    margin: 5px 0;
+  }
+  nav ul li a{
+    padding: 10px;
+  }
+  .iconotexto, .textoladoicono, .videos li{
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #puzzle, div#oygContext {
+    width: 100%;
+  }
+  #puzzle .puzzleSquare {
+    height: 38px;
+    width: 7%;
+  }
+  .botonnaranja{
+        float: none;
+  }
+  #words{
+        column-count: 1;
+        -webkit-column-count: 1;
+  }
+  .franjagris h2{
+    font-size: 30px;
+  }
+  div.introduccion div.mitad{
+    width: 100%;
+  }
+
+}

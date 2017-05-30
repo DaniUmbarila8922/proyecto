@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="styles/prettyphoto.css" type="text/css"/>
 <link rel="stylesheet" href="styles/totop.css" type="text/css"/>
 
+
+
 </head>
 <body>
 <div class="main-container">
@@ -75,7 +77,18 @@ allowfullscreen></iframe>
             </div> 
             <div class="login">
 					<form action="validar.php" method="post"> 
-						<div id="fcb"><a href="https://www.facebook.com"></a></div>
+						<div id="fcb">
+                            <div id="fb-root"></div>
+                                <script>(function(d, s, id) {
+                                            var js, fjs = d.getElementsByTagName(s)[0];
+                                            if (d.getElementById(id)) return;
+                                            js = d.createElement(s); js.id = id;
+                                            js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9&appId=132214950677424";
+                                            fjs.parentNode.insertBefore(js, fjs);
+                                        }(document, 'script', 'facebook-jssdk'));
+                                </script>
+                            </div>
+                            <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false">aqui</div>
                     	<h2>Ingresar</h2>
                         <div id="fcb"><a href="https://www.facebook.com"></a></div>
 						<input type="text" placeholder="&#128272;usuario" name="usuario"><br>

@@ -8,7 +8,7 @@ $restultado=mysqli_query($conexion,$consulta);
 $filas=mysqli_num_rows($restultado);
 	
 if($filas>0){
-		header("location:usuario.html");
+		header("location:index.html");
 	}
 	else{
 		echo "Error en la de autenticacion";

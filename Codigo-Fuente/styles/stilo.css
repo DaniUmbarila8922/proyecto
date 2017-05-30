@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: #fffffA;
+	min-height: 100vh;
+}
+
+header{
+    width: 100%
+}
+
+header nav {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #FFF;
+}
+
+.barramenu{
+    display: none;
+}
+header nav ul{
+    overflow: hidden;
+    list-style: none;
+}
+
+header nav ul li {
+    
+    float: left;
+}
+
+header nav ul li a {
+    color:#434747;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    border-radius: 35px;
+}
+header nav ul li span{
+    margin-right: 10px;
+}
+
+header nav ul li a:hover{
+    background: #CDFAED;
+}
+section{
+    padding: 20px;
+}
+@media screen and (max-width:500px){
+    
+    header nav{
+        width: 70%;
+        height: 100%;
+		left: -100%;
+        margin: 0;
+        position: fixed;
+    }
+    header nav ul li {
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255,255,255,0.4);
+    }
+    
+    .barramenu{
+        display: block;
+        width: 100%;
+        background: #FFF;
+    }
+    .barramenu .btn-menu{
+        display: block;
+        padding: 20px;
+        background:#fff;
+        color: #434747;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        box-sizing: border-box;
+        
+    }
+    .barramenu span{
+    	float: right;
+    	font-size: 30px;
+    }
+}
+form{
+	margin: auto;
+	width: 50%;
+	max-width: 500px;
+	background: #F3F3F3;
+	padding: 30px;
+	border: 1px solid rgba(0,0,0, 0.3);
+}
+h2{
+	text-align: center;
+	margin-bottom: 20px;
+	color:rgbba(0,0,0,0.5);
+}
+input {
+	padding: 10ppx;
+	width: 80%;
+	margin: 15px 0;
+	font-size: 20px;
+}
+input[type="submit"]{
+	background: linear-gradient(#05F1AD,#7FF9F9);
+	border:0;
+	color:brown;
+	opacity: 0.8;
+	cursor:pointer;
+	border-radius: 20px;
+	margin-bottom: 0;
+	width:50%;
+	margin-left:13%;
+	
+}
+
+input[type="submit"]:hover{
+	opacity: 2;
+	
+}
+input[type="submit"]:active{
+	transform: scale(0.95);
+}
+
+#fcb{
+	margin:0;
+	background-image:url('../img/icon/logoface.png');
+	background-repeat:no-repeat;
+    background-size:35px;
+    height:40px;
+    width: 40px;
+ }
+#fcb:hover{
+        background-size:35px;
+		background-image:url('../img/icon/facebook.png');
+    }
